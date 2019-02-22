@@ -142,8 +142,11 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image8] ![alt text][image9] ![alt text][image10] 
 ![alt text][image11] ![alt text][image12]
 
+I picked up from the wikipedia.org and resized them to fit the training and validation data. I think this would be easy to predict as the image quality is very good. If we have low quality image then it might be that the prediction fail. There are other reasons where it can fail is the lighting conditions on the images.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+
+Unfortunately all images have been detected correctly, so there is not much to discuss about the performance of the recognizer.
 
 Here are the results of the prediction:
 
@@ -156,11 +159,13 @@ Here are the results of the prediction:
 | No Entry		    	| No Entry      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. There were some of the prediction that got .92% and 0.95% of the accuracy and some got 100% accuracy.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 21th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 21th cell of the Ipython notebook. The main reason I see is the good quality of the image. Also it could be the reason where we have the exact same image in the training set and our model has learned.
+
+There are other images whose accuracy is not 100% and I think the reason could be the model has overfit.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
